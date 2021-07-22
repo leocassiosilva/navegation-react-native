@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-export function MainButton ({onPress}){
+export function MainButton ({title, onPress}){
     return (
         <TouchableOpacity style={styles.btn} onPress={onPress}>
-          <Text style={styles.texto}>Iniciar</Text>
+          <Text style={styles.texto}>{title}</Text>
         </TouchableOpacity>
     )
 };
@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
         borderRadius:10,
         justifyContent:'center',
         alignItems:'center',
+        margin:10
     },
    
     texto:{

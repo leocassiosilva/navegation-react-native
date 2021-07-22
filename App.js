@@ -8,7 +8,11 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import {Home} from './src/Pages/Home';
 import {Sobre} from './src/Pages/Sobre';
 import {Main} from './src/Pages/Main';
- 
+import {Cursos} from './src/Pages/Cursos';
+import {Ads} from './src/Pages/Cursos/Ads';
+import {Quimica} from './src/Pages/Cursos/Quimica';
+
+
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
@@ -17,6 +21,7 @@ function MyTabs() {
     <Tab.Navigator>
       <Tab.Screen name="Home" component={Main} />
       <Tab.Screen name="Sobre" component={Sobre} />
+      <Tab.Screen name="Cursos" component={Cursos} />
     </Tab.Navigator>
   );
 }
@@ -33,6 +38,14 @@ export default function App() {
       <Stack.Screen
         name="Sobre"
         component={Sobre}
+      />
+      <Stack.Screen
+        name="Ads"
+        component={Ads}
+      />
+      <Stack.Screen
+        name="Quimica"
+        component={Quimica}
       />
      </Stack.Navigator>
    </NavigationContainer>
